@@ -1,0 +1,170 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #121214 url('assets/bg.jpg') no-repeat fixed top center / cover;
+    font-family: 'Inter', sans-serif;
+    line-height: 160%;
+}
+
+ul {
+    list-style: none;
+}
+
+header {
+    height: 12rem;
+}
+
+header div {
+    width: 10rem;
+    margin: 2rem auto;
+    padding: .25rem;
+    border-radius: 50%;
+    background-image: linear-gradient(90deg, #9272fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    animation: fromTop 2s .3s backwards;
+}
+
+header img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+main {
+    width: 90vw;
+    max-width: 580px;
+    margin: 0 auto 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+section {
+    color: white;
+    border-radius: .625rem;
+    padding-top: .25rem;
+    background-image: linear-gradient(90deg, #9272fc 0%, #43e7ad 50.52%, #e2d45c 100%);
+
+    animation: toTop 2s backwards;
+}
+
+section:nth-child(1) {
+    animation-delay: 0;
+}
+section:nth-child(2) {
+    animation-delay: .3s;
+}
+section:nth-child(3) {
+    animation-delay: .6s;
+}
+
+section div {
+    background-color: #2A2634;
+    padding: 1.5rem;
+    border-radius: .5rem;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    letter-spacing: -0.47px;
+    margin-bottom: .5rem;
+    text-align: center;
+}
+
+section p {
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+section ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+.game-list img {
+    border-radius: .5rem;
+    width: 5.75rem;
+}
+
+.channel-list img {
+    border-radius: 50%;
+    width: 4.5rem;
+}
+
+#chess {
+    border: .1rem solid rgb(24, 15, 15);
+}
+
+.social-list img, .social-list svg {
+    width: 2rem;
+    height: 2rem;
+    padding: .25rem;
+    border-radius: 50%;
+}
+
+.social-list img {
+    scale: .85;
+    filter: invert(1);
+}
+
+a img, a svg {
+    transition: .25s;
+}
+
+a img:hover, a svg:hover {
+    transform: scale(1.2);
+}
+
+@keyframes fromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes toTop {
+    from {
+        opacity: 0;
+        transform: translateY(10rem);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 516px) {
+    section h2, section p {
+        text-align: left;
+    }
+
+    section ul {
+        justify-content: left;
+    }
+}
